@@ -1,29 +1,6 @@
-// function printMessage(elementId, format, message) {
-//     document.querySelector(`#${elementId}`).innerHTML = `<${format}>${message}</${format}>`;
-// }
+// let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// arr.map(function (num) {
+//     return console.log(Math.pow(num, 2));
+// });
 
-// printMessage('msg', 'h1', 'Привет мир!!!');
-
-function addToDom(elementId) {
-    return function(content) {
-        document.querySelector(`#${elementId}`).innerHTML = content;
-    }
-}
-
-function h1(message) {
-    return '<h1>' + message + '</h1>';
-}
-
-function echo(message) { 
-    return message
-}
-
-let run = function(f, g, h) {
-    return function(x) {
-        return f(g(h(x)));
-    };
-};
-
-let printMessage = run(addToDom('msg'), h1, echo);
-
-printMessage('Hello World!');
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => console.log(Math.pow(num, 2)));
